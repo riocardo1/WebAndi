@@ -27,14 +27,49 @@ ul li{
 }
 .centrar{
         margin: 0 auto;
-    float: none;
+
+        float: none !important;
 }
 #barraazul{
     background: blue;
         margin-top: 70px;
+        color:white;
+            width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.contenido h1{
+        padding-top: 75px;
+        padding-bottom: 30px;
+}
+.fotolat {
+    padding: 0px !important;
+}
+.contenido{
+    width: 100%;
+    margin: 0px !important;
+    padding: 0px;
+}
+.contenido ul li{
+   display: list-item !important; 
+   list-style-image: url('../img/selector.png');
+}  
+.centrar span{
+        text-transform: uppercase;
+}
+#barraazul .centrar{
+        padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
 }
 #barraazulosc{
     background: green;
+    color:white;
+        padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 .center {
     display:table-cell;

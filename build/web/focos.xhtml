@@ -36,7 +36,7 @@
         </div>
         <div class="row" id="barraazul">
             <div class="col-md-10 centrar">
-                <img src="img/donaciones.png"/>
+                <img src="img/donacionesblanco.png"/>
                 Identificacion de focos de <b>donaciones con objetivos sociales</b> asociados a mi sector
             </div>
         </div>
@@ -56,18 +56,20 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="col-md-10">
-                <div class="col-md-8">
-                    <h2>Lorem ipsum</h2>
-                    <ui:repeat var="foco" value="#{focosBean.focos}"> 
-                        <h1>#{foco.foinsoNombre}</h1> 
-                    </ui:repeat> 
+        <div class="row contenido">
+            
+                <div class="col-md-7 col-md-offset-1">
+                    <h1>Lorem ipsum</h1>
+                    <ul>
+                        <ui:repeat var="foco" value="#{focosBean.focos}"> 
+                            <li><h3>#{foco.foinsoNombre}</h3></li>
+                        </ui:repeat> 
+                    </ul>
                 </div>
-                <div class="col-md-4">
-                    <img src="img/fotofocos.png"/>
+                <div class="col-md-4 fotolat">
+                    <img class="img-responsive" src="img/fotofocos.png"/>
                 </div>
-            </div>
+            
         </div>
         
     </h:body>

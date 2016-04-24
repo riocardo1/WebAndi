@@ -1,14 +1,73 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+        <h:outputStylesheet name="css/style.css" />
+        <link rel="stylesheet" href="css/style.css"></link>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <h:outputText value="#{focosBean.sector}"/>
-        <h:outputText value="#{focosBean.subSector}"/>
-        <h:outputText value="#{focosBean.empresa}"/>
+         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="" href="#"><img src="img/logos.png"/></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><img src="img/home.png"/>Cerrar Sesion</a></li>
+                        <li><a href="#"><img src="img/logout.png"/>Cerrar Sesion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="barraazul">
+            <div class="col-md-10 centrar">
+                <img src="img/donaciones.png"/>
+            </div>
+        </div>
+        <div class="row" id="barraazulosc">
+            <div class="col-md-10 centrar">
+                <div class="col-md-4">
+                    Empresa:
+                    <h:outputText value="#{focosBean.empresa}" style="font-weight:bold"/>
+                </div>
+                <div class="col-md-4">
+                    Sector:
+                    <h:outputText value="#{focosBean.sector}" style="font-weight:bold"/>
+                </div>
+                <div class="col-md-4">
+                    Subsector:
+                    <h:outputText value="#{focosBean.subSector}" style="font-weight:bold"/>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="col-md-10">
+                <div class="col-md-8">
+                    <h2>Lorem ipsum</h2>
+                    <ui:repeat var="foco" value="#{focosBean.focos}"> 
+                        <h1>#{foco.foinsoNombre}</h1> 
+                    </ui:repeat> 
+                </div>
+                <div class="col-md-4">
+                    <img src="img/fotofocos.png"/>
+                </div>
+            </div>
+        </div>
         
     </h:body>
 </html>

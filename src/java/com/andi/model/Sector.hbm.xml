@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/04/2016 10:02:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.andi.model.Sector" table="sector" schema="dbo" catalog="andi" optimistic-lock="version">
+        <id name="sectorNombre" type="string">
+            <column name="sector_nombre" length="100" />
+            <generator class="assigned" />
+        </id>
+        <set name="subsectors" table="subsector" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sector_nombre" length="100" />
+            </key>
+            <one-to-many class="com.andi.model.Subsector" />
+        </set>
+    </class>
+</hibernate-mapping>

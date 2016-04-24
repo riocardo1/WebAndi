@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/04/2016 10:02:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.andi.model.Subsector" table="subsector" schema="dbo" catalog="andi" optimistic-lock="version">
+        <id name="subsectorNombre" type="string">
+            <column name="subsector_nombre" length="100" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="sector" class="com.andi.model.Sector" fetch="select">
+            <column name="sector_nombre" length="100" />
+        </many-to-one>
+        <set name="subsectorAsuntos" table="subsector_asunto" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="subsector_nombre" length="100" />
+            </key>
+            <one-to-many class="com.andi.model.SubsectorAsunto" />
+        </set>
+        <set name="subsectorOportunidads" table="subsector_oportunidad" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="subsector_nombre" length="100" />
+            </key>
+            <one-to-many class="com.andi.model.SubsectorOportunidad" />
+        </set>
+        <set name="usuarios" table="usuario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="subsector_nombre" length="100" />
+            </key>
+            <one-to-many class="com.andi.model.Usuario" />
+        </set>
+        <set name="subsectorFocos" table="subsector_foco" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="subsector_nombre" length="100" />
+            </key>
+            <one-to-many class="com.andi.model.SubsectorFoco" />
+        </set>
+    </class>
+</hibernate-mapping>

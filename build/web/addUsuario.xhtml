@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>.: Agregar Usuario :.</title>
+        
+
+    </h:head>
+    <h:body>
+        Agregar Cliente
+        
+        
+        
+        <h:form>
+    <p:growl id="msgs" showDetail="true" />
+ 
+    <p:panel header="Select a Location" style="margin-bottom:10px;">
+        <h:panelGrid columns="2" cellpadding="5">
+            Nombre de la empresa: <h:inputText value="#{usuarioBean.usuarioEmpresa}"/><br/>
+           
+            Nombre: <h:inputText value="#{usuarioBean.usuarioNombre}"/><br/>
+            Cargo <h:inputText value="#{usuarioBean.usuarioCargo}"/><br/>
+            Area: <h:inputText value="#{usuarioBean.usuarioArea}"/><br/>
+            Email: <h:inputText value="#{usuarioBean.usuarioId}"/><br/>
+            Contraseña: <h:inputSecret value="#{usuarioBean.usuarioPass}"/><br/>
+            Sector
+            <p:selectOneMenu id="country" value="#{usuarioBean.country}" style="width:150px">
+                <p:ajax listener="#{usuarioBean.onCountryChange}" update="city" />
+                <f:selectItem itemLabel="Select Country" itemValue="" noSelectionOption="true" />
+                <f:selectItems value="#{usuarioBean.countries}" />
+            </p:selectOneMenu>
+ 
+            Subsector
+            <p:selectOneMenu id="city" value="#{usuarioBean.city}" style="width:150px">
+                <f:selectItem itemLabel="Select City" itemValue="" noSelectionOption="true" />
+                <f:selectItems value="#{usuarioBean.cities}" />
+            </p:selectOneMenu>
+        </h:panelGrid>
+ 
+            
+        <p:commandButton value="Continuar" update="msgs" actionListener="#{usuarioBean.addUsuario}" icon="ui-icon-check" />
+    </p:panel>
+</h:form>
+        
+        
+    </h:body>
+</html>
+

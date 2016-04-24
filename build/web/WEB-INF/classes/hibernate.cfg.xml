@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=andi</property>
+    <property name="hibernate.connection.username">capptus</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.connection.password">Encuentro1</property>
+    <property name="hibernate.show_sql">true</property>
+    <mapping resource="com/andi/model/SubsectorOportunidad.hbm.xml"/>
+    <mapping resource="com/andi/model/Sector.hbm.xml"/>
+    <mapping resource="com/andi/model/Subsector.hbm.xml"/>
+    <mapping resource="com/andi/model/Usuario.hbm.xml"/>
+    <mapping resource="com/andi/model/Oportunidad.hbm.xml"/>
+    <mapping resource="com/andi/model/Recomendacion.hbm.xml"/>
+    <mapping resource="com/andi/model/SubsectorFoco.hbm.xml"/>
+    <mapping resource="com/andi/model/FocoInversionSocial.hbm.xml"/>
+    <mapping resource="com/andi/model/SubsectorAsunto.hbm.xml"/>
+    <mapping resource="com/andi/model/Pregunta.hbm.xml"/>
+    <mapping resource="com/andi/model/Dimension.hbm.xml"/>
+    <mapping resource="com/andi/model/AsuntoRelevante.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

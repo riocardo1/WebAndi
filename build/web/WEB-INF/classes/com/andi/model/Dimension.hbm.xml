@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/04/2016 10:02:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.andi.model.Dimension" table="dimension" schema="dbo" catalog="andi" optimistic-lock="version">
+        <id name="dimensionId" type="long">
+            <column name="dimension_id" precision="18" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="dimensionDescripcion" type="string">
+            <column name="dimension_descripcion" length="50" />
+        </property>
+        <set name="recomendacions" table="recomendacion" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="dimension_id" precision="18" scale="0" />
+            </key>
+            <one-to-many class="com.andi.model.Recomendacion" />
+        </set>
+    </class>
+</hibernate-mapping>

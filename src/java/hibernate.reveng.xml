@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="andi" match-schema="dbo"/>
+  <table-filter match-name="subsector_oportunidad"/>
+  <table-filter match-name="asunto_relevante"/>
+  <table-filter match-name="subsector_asunto"/>
+  <table-filter match-name="subsector"/>
+  <table-filter match-name="dimension"/>
+  <table-filter match-name="oportunidad"/>
+  <table-filter match-name="usuario"/>
+  <table-filter match-name="pregunta"/>
+  <table-filter match-name="foco_inversion_social"/>
+  <table-filter match-name="recomendacion"/>
+  <table-filter match-name="subsector_foco"/>
+  <table-filter match-name="sector"/>
+</hibernate-reverse-engineering>

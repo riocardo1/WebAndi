@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+        <h:outputStylesheet name="css/style.css" />
+        <link rel="stylesheet" href="css/style.css"></link>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        
+        <title>Brancho</title>
+    </h:head>
+    <h:body>
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="" href="#"><img src="img/logos.png"/></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><img src="img/home.png"/>Cerrar Sesion</a></li>
+                        <li><a href="#"><img src="img/logout.png"/>Cerrar Sesion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="fila1" class="row">
+                
+                <div  id="fila1Col1" class="col-md-6" >
+                    <div  class="row" >
+                        
+                        <div id="lapiz" class="col-md-2 col-md-offset-5" >
+                            <img src="img/lapiz.png"/>                        
+                        </div>
+                        
+                    </div>   
+                    <p>Autodiagnóstico <br/><b>sobre la gestión de donaciones</b><br/> con objetivos sociales.</p>                            
+                    <div  class="row" >
+                        <div id="boton" class="col-md-2 col-md-offset-5" >
+                            <h:link outcome="focos" value="Empezar" class="btn btn-default" />
+                          
+                        </div>
+                    </div>           
+                            
+                </div>
+                
+                <div  id="fila1Col2" class="col-md-6" >
+                    <div  class="row" >
+                        
+                        <div id="lapiz" class="col-md-2 col-md-offset-5" >
+                            <img src="img/lapiz.png"/>                        
+                        </div>
+                        
+                    </div>
+                            <p>Autodiagnóstico sobre la gestión <br/><b>de impactos sociales,ambientales,economicos</b><br/> y de gobierno corporativo.</p>                            
+                    <div  class="row" >
+                        <div id="boton" class="col-md-2 col-md-offset-5" >
+                            <button type="button" class="btn btn-default">Empezar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="fila2" class="row">
+                <div  id="opciones" class="col-md-10 col-md-offset-1" >
+                                     
+                    <div  id="fila2Col1" class="col-md-4" >
+                        <img src="img/donaciones.png"/>
+                        <p>Identificacion de focos de <br/><b>donaciones con objetivos sociales</b><br/> asociados a mi sector.</p>
+                        <h:link outcome="focos" value="Empezar" class="btn btn-primary" />
+                    </div>
+
+                    <div  id="fila2Col2" class="col-md-4" >
+                        <img src="img/ambiental.png"/>
+                        <p>Identificacion de impactos sociales <br/><b>ambientales,economicos y </b><br/> gobierno corporativo asociados a mi sector.</p>
+                        <button type="button" class="btn btn-info">Empezar</button>
+                    </div>
+
+                    <div  id="fila2Col3" class="col-md-4" >
+                        <img src="img/negocios.png"/>
+                        <p>Identificacion de oportunidades<br/> <b>de nuevos negocios con impactos</b> <br/>positivos en mi sector.</p>
+                        <button type="button" class="btn btn-warning">Empezar</button>
+                    </div>
+                </div>
+            </div>
+        <div id="footer" class="row">
+                ojo
+            </div>
+    </h:body>
+</html>
+

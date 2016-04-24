@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/04/2016 10:02:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.andi.model.Usuario" table="usuario" schema="dbo" catalog="andi" optimistic-lock="version">
+        <id name="usuarioId" type="string">
+            <column name="usuario_id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="subsector" class="com.andi.model.Subsector" fetch="select">
+            <column name="subsector_nombre" length="100" />
+        </many-to-one>
+        <property name="usuarioNombre" type="string">
+            <column name="usuario_nombre" length="100" />
+        </property>
+        <property name="usuarioPass" type="string">
+            <column name="usuario_pass" length="50" />
+        </property>
+        <property name="usuarioEmpresa" type="string">
+            <column name="usuario_empresa" length="50" />
+        </property>
+        <property name="usuarioCargo" type="string">
+            <column name="usuario_cargo" length="50" />
+        </property>
+        <property name="usuarioArea" type="string">
+            <column name="usuario_area" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/04/2016 10:02:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.andi.model.SubsectorOportunidad" table="subsector_oportunidad" schema="dbo" catalog="andi" optimistic-lock="version">
+        <id name="suboId" type="long">
+            <column name="subo_id" precision="18" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="oportunidad" class="com.andi.model.Oportunidad" fetch="select">
+            <column name="oportunidad_id" precision="18" scale="0" />
+        </many-to-one>
+        <many-to-one name="subsector" class="com.andi.model.Subsector" fetch="select">
+            <column name="subsector_nombre" length="100" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

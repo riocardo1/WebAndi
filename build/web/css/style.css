@@ -1,0 +1,104 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8/04/2016, 06:30:21 PM
+    Author     : juanse0529
+*/
+#container{
+   background: url('../img/fondo.png');
+   background-repeat: no-repeat;
+   background-size: 100%;
+}
+
+ul{
+    list-style: initial;
+}
+ul li{
+    display: inline-block;
+}
+#top{
+    background-color: #f1f1f1;
+}
+#logos img{
+    padding-left:45px;
+}
+.center {
+    display:table-cell;
+    vertical-align:middle;
+    float:none;
+}
+.center-row {
+ display:table;
+}
+#fila1Col1{
+   background: url('../img/gestion.png');
+   background-repeat: no-repeat;
+   background-size: 100%;
+   min-height: 440px;
+   padding-top: 70px;
+}
+#fila1Col2 img{
+padding-bottom: 10px;
+}
+#lapiz{
+    padding-bottom: 10px;
+}
+#fila1Col2{
+   background: url('../img/impactos.png');
+   background-repeat: no-repeat;
+   background-size: 100%;
+   min-height: 440px;
+   padding-top: 70px;
+}
+#logos img{
+    padding-bottom: 20px;
+    padding-top: 20px; 
+}
+#menu img{
+    padding-top: 30px; 
+}
+#sesion a{
+    color: #8cb920;
+    text-decoration: none;
+    font-size: 22px;
+    vertical-align: bottom;
+    padding-left: 15px;
+}
+#fila1 p{
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 100;
+}
+#casita a{
+    color: #6b9118;
+    text-decoration: none;
+    font-size: 22px;
+    vertical-align: bottom;
+    padding-left: 15px;
+}
+#footer{
+   background: url('../img/footer.png');
+   background-repeat: no-repeat;
+   background-size: 100%;
+   min-height: 240px;
+   position: relative;
+   z-index: 0;
+}
+#opciones{
+   text-align: center;
+   font-size: 13px;
+}
+#fila2{
+    
+    z-index: 2;
+}
+#wrapper{
+    width: 100%; 
+}
+#left{
+    min-height: 600px;; 
+}

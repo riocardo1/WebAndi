@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/04/2016 10:02:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.andi.model.Pregunta" table="pregunta" schema="dbo" catalog="andi" optimistic-lock="version">
+        <id name="preguntaId" type="long">
+            <column name="pregunta_id" precision="18" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="preguntaDescripcion" type="string">
+            <column name="pregunta_descripcion" length="500" />
+        </property>
+        <property name="preguntaPredecesora" type="java.lang.Long">
+            <column name="pregunta_predecesora" precision="18" scale="0" />
+        </property>
+        <property name="preguntaPadre" type="java.lang.Long">
+            <column name="pregunta_padre" precision="18" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

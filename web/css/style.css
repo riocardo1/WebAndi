@@ -25,6 +25,16 @@ ul li{
 #logos img{
     padding-left:45px;
 }
+.centrar{
+        margin: 0 auto;
+    float: none;
+}
+#barraazul{
+    background: blue;
+}
+#barraazulosc{
+    background: green;
+}
 .center {
     display:table-cell;
     vertical-align:middle;

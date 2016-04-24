@@ -49,6 +49,7 @@ public class FocoInversionSocial  implements java.io.Serializable {
     public void setSubsectorFocos(Set<SubsectorFoco> subsectorFocos) {
         this.subsectorFocos = subsectorFocos;
     }
+    
 
 
 

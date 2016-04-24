@@ -5,9 +5,13 @@
  */
 package com.andi.bean;
 
+import com.andi.dao.FocosDAO;
+import com.andi.model.FocoInversionSocial;
+import com.andi.model.Subsector;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import java.util.ArrayList;
 import javax.annotation.PostConstruct;
 import javax.faces.context.FacesContext;
 
@@ -25,16 +29,25 @@ public class FocosBean implements Serializable {
     private String sector;
     private String subSector;
     private String empresa;
+    private ArrayList<FocoInversionSocial> focos;
     public FocosBean() {
+        
     }
     
     
     @PostConstruct
     public void init() {
+        
         FacesContext context = FacesContext.getCurrentInstance();
         setSector((String) context.getExternalContext().getSessionMap().get("sector"));
         setSubSector((String) context.getExternalContext().getSessionMap().get("subsector"));
         setEmpresa((String) context.getExternalContext().getSessionMap().get("empresa"));
+        
+        FocosDAO focoDAO = new FocosDAO();
+        Subsector subSectorTmp = new Subsector(getSubSector());
+        setFocos(focoDAO.getAllFocosBySubSector(subSectorTmp));
+        
+        
         
     }
 
@@ -78,6 +91,20 @@ public class FocosBean implements Serializable {
      */
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
+    }
+
+    /**
+     * @return the focos
+     */
+    public ArrayList<FocoInversionSocial> getFocos() {
+        return focos;
+    }
+
+    /**
+     * @param focos the focos to set
+     */
+    public void setFocos(ArrayList<FocoInversionSocial> focos) {
+        this.focos = focos;
     }
     
 }
